@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/keita/.ssh'
+let g:netrw_dirhist_2='/workspace/memowomome/2014/シフト演算に負の値を使うと0になる'
+let g:netrw_dirhist_3='/workspace/codeIQ/bughunter'
+let g:netrw_dirhist_4='/workspace/progress_bar_gulp/-c'
+let g:netrw_dirhist_5='/Users/keita/Downloads/PlugX-Rep_RasCS4.aip'
+let g:netrw_dirhist_6='/workspace/learn_rails/sample_app'
