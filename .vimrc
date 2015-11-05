@@ -165,3 +165,4 @@ python powerline_setup()
 python del powerline_setup
 set showtabline=2
 set noshowmode
+set t_Co=256
