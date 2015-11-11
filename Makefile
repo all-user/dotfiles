@@ -5,6 +5,8 @@ DOTFILES_FILES    := $(filter-out $(DOTFILES_EXCLUDES), $(DOTFILES_TARGET))
 
 deploy:
 		@$(foreach val, $(DOTFILES_FILES), ln -sfnv $(abspath $(val)) $(HOME)/$(val);)
+		mkdir -p .vim/bundle
+		git clone git@github.com:Shougo/neobundle.vim.git .vim/bundle/neobundle.vim
 
 init:
 		@$(foreach val, $(wildcard ./etc/init/*.sh), bash $(val);)

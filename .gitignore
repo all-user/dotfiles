@@ -14,8 +14,4 @@
 # .vim dir
 !/.vim/
 /.vim/*
-
-!/.vim/bundle/
-/.vim/bundle/*
-!/.vim/bundle/neobundle.vim
 !/.vim/colors/
