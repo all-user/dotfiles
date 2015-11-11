@@ -1,14 +1,21 @@
 # ignore all
-*
-*/
+/*
+/.*
 
 # allow files
-!.gitignore
-!.vim/bundle/neobundle.vim
-!.vim/colors
-!.vimrc
-!.zpreztorc
-!.zshrc
-!.zshenv
-!Makefile
-!README.md
+!/.gitignore
+!/.vimrc
+!/.zpreztorc
+!/.zshrc
+!/.zshenv
+!/Makefile
+!/README.md
+
+# .vim dir
+!/.vim/
+/.vim/*
+
+!/.vim/bundle/
+/.vim/bundle/*
+!/.vim/bundle/neobundle.vim
+!/.vim/colors/
