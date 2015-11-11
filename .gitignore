@@ -1,3 +1,14 @@
-.vim/bundle
-.netrwhist
-.gitignore
+# ignore all
+*
+*/
+
+# allow files
+!.gitignore
+!.vim/bundle/neobundle.vim
+!.vim/colors
+!.vimrc
+!.zpreztorc
+!.zshrc
+!.zshenv
+!Makefile
+!README.md
