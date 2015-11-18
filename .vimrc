@@ -10,7 +10,7 @@ set cmdheight=2
 set showmatch
 set helpheight=999
 set list
-set listchars=tab:>.,eol:⤸,extends:□,precedes:□
+set listchars=tab:\ \ ,eol:⤸,extends:□,precedes:□
 
 set backspace=indent,eol,start
 set whichwrap=b,s,h,l,<,>,[,]
