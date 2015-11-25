@@ -120,3 +120,6 @@ export PATH="$PATH:$HOME/.nodebrew/current/bin"
 autoload -Uz promptinit
 promptinit
 prompt paradox
+
+# homebrew
+alias brew="env PATH=${PATH/\/Users\/okamoto_k\/Library\/Python\/2.7\/bin/} brew"
