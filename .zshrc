@@ -29,6 +29,7 @@ export LC_ALL=en_US.UTF-8
 
 # エディタ
 export EDITOR=/usr/local/bin/vim
+export VISUAL=/usr/local/bin/vim
 
 
 # -------------------------------------
