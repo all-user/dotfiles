@@ -123,4 +123,4 @@ promptinit
 prompt paradox
 
 # homebrew
-alias brew="env PATH=${PATH/\/Users\/okamoto_k\/Library\/Python\/2.7\/bin/} brew"
+alias brew="env PATH=${PATH/\/Users\/$USER\/Library\/Python\/2.7\/bin/} brew"
