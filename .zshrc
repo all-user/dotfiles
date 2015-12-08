@@ -15,9 +15,9 @@ source ~/antigen/antigen.zsh
 
 antigen bundle sorin-ionescu/prezto
 
-export PATH=$PATH:~/Library/Python/2.7/bin
+export PATH=$PATH:~/.local/bin
 powerline-daemon -q
-. ~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
+. ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # -------------------------------------
 # 環境変数
