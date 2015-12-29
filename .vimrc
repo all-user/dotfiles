@@ -10,7 +10,13 @@ set cmdheight=2
 set showmatch
 set helpheight=999
 set list
-set listchars=tab:\ \ ,eol:⤸,extends:□,precedes:□
+set listchars=eol:⤸,tab:>-,trail:~,extends:>,precedes:<,nbsp:.
+augroup highlightIdegraphicSpace
+  autocmd!
+  autocmd Colorscheme * highlight IdeographicSpace term=underline ctermbg=DarkGreen guibg=DarkGreen
+  autocmd VimEnter,WinEnter * match IdeographicSpace /　/
+augroup END
+
 
 set backspace=indent,eol,start
 set whichwrap=b,s,h,l,<,>,[,]
