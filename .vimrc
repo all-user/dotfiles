@@ -65,6 +65,8 @@ NeoBundle 'marijnh/tern_for_vim'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'toyamarinyon/vim-swift'
 NeoBundle 'wavded/vim-stylus'
+NeoBundle 'digitaltoad/vim-jade'
+
 
 call neobundle#end()
 
