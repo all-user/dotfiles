@@ -11,13 +11,25 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-source ~/antigen/antigen.zsh
+source $HOME/antigen/antigen.zsh
 
 antigen bundle sorin-ionescu/prezto
 
-export PATH=$PATH:~/Library/Python/2.7/bin
+# homebrew
+alias brew="env PATH=${PATH/\/Users\/$USER\/Library\/Python\/2.7\/bin/} brew"
+
+# anyenv
+export PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"
+
+# powerline
+export PATH=$PATH:$HOME/Library/Python/2.7/bin
 powerline-daemon -q
-. ~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
+. $HOME/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
+
+# golang
+export GOPATH=$HOME/.go
+export PATH=$PATH:$GOPATH/bin
 
 # -------------------------------------
 # 環境変数
@@ -107,21 +119,19 @@ function title {
     echo -ne "\033]0;"$*"\007"
 }
 
-
-# rbenv settings
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-export PATH="$HOME/.rbenv/shims:$PATH"
-
-# nodebrew
-# export PATH="$PATH:$HOME/.nodebrew/default/bin"
-export PATH="$PATH:$HOME/.nodebrew/current/bin"
-
 # prezto
 autoload -Uz promptinit
 promptinit
 prompt paradox
 
-# homebrew
-alias brew="env PATH=${PATH/\/Users\/$USER\/Library\/Python\/2.7\/bin/} brew"
-
+# ghq + peco
+function peco-src () {
+  local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
+  if [ -n "$selected_dir" ]; then
+    BUFFER="cd ${selected_dir}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N peco-src
+bindkey '^]' peco-src
