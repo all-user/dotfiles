@@ -131,6 +131,3 @@ function peco-src () {
 }
 zle -N peco-src
 bindkey '^]' peco-src
-
-# dotto
-export DOTTO_HOME=$HOME/.dotto
