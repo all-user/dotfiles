@@ -11,13 +11,21 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-source ~/antigen/antigen.zsh
+source $HOME/antigen/antigen.zsh
 
 antigen bundle sorin-ionescu/prezto
 
-export PATH=$PATH:~/.local/bin
+export PATH=$PATH:$HOME/.local/bin
 powerline-daemon -q
-. ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+. $HOME/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+
+# anyenv
+export PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"
+
+# golang
+export GOPATH=$HOME/.go
+export PATH=$PATH:$GOPATH/bin
 
 # -------------------------------------
 # 環境変数
@@ -106,16 +114,6 @@ alias tree="tree -NC" # N: 文字化け対策, C:色をつける
 function title {
     echo -ne "\033]0;"$*"\007"
 }
-
-
-# rbenv settings
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-export PATH="$HOME/.rbenv/shims:$PATH"
-
-# nodebrew
-# export PATH="$PATH:$HOME/.nodebrew/default/bin"
-export PATH="$PATH:$HOME/.nodebrew/current/bin"
 
 # prezto
 autoload -Uz promptinit
