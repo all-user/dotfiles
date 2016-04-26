@@ -124,3 +124,18 @@ prompt paradox
 
 # homebrew
 alias brew="env PATH=${PATH/\/Users\/okamoto_k\/Library\/Python\/2.7\/bin/} brew"
+
+# ghq + peco
+function peco-src () {
+  local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
+  if [ -n "$selected_dir" ]; then
+    BUFFER="cd ${selected_dir}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N peco-src
+bindkey '^]' peco-src
+
+# dotto
+export DOTTO_HOME=$HOME/.dotto
