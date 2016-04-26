@@ -1,8 +1,6 @@
 set compatible
 
 syntax on
-colorscheme molokai
-
 
 set number
 set laststatus=2
@@ -174,3 +172,5 @@ python del powerline_setup
 set showtabline=2
 set noshowmode
 set t_Co=256
+
+colorscheme molokai
