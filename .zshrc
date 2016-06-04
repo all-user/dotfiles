@@ -5,6 +5,8 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
+# ITerm2 Integration
+source .iterm2_shell_integration.zsh
 
 # -------------------------------------
 # 環境変数
