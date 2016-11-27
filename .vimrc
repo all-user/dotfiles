@@ -3,6 +3,7 @@ set compatible
 syntax on
 
 set number
+set nowrap
 set laststatus=2
 set cmdheight=2
 set showmatch
