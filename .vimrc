@@ -71,6 +71,7 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'toyamarinyon/vim-swift'
 NeoBundle 'wavded/vim-stylus'
 NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'ConradIrwin/vim-bracketed-paste'
 
 
 call neobundle#end()
