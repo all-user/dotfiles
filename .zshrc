@@ -61,7 +61,7 @@ setopt prompt_subst
 setopt ignoreeof
 
 ## バックグラウンドジョブが終了したらすぐに知らせる。
-setopt no_tify
+setopt notify
 
 ## 直前と同じコマンドをヒストリに追加しない
 setopt hist_ignore_dups
