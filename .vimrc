@@ -43,6 +43,7 @@ set autoindent
 set smartindent
 
 set mouse=a
+set clipboard=nonamed
 
 set wildmenu wildmode=list:longest,full
 
