@@ -10,8 +10,12 @@
 !/.zshenv
 !/Makefile
 !/README.md
+!/.hyper.js
 
 # .vim dir
 !/.vim/
 /.vim/*
 !/.vim/colors/
+
+# bin dir
+!/bin/
