@@ -15,18 +15,6 @@ source $HOME/antigen/antigen.zsh
 
 antigen bundle sorin-ionescu/prezto
 
-# homebrew
-alias brew="env PATH=${PATH/\/Users\/$USER\/Library\/Python\/2.7\/bin/} brew"
-
-# anyenv
-export PATH="$HOME/.anyenv/bin:$PATH"
-eval "$(anyenv init -)"
-
-
-# golang
-export GOPATH=$HOME/.go
-export PATH=$PATH:$GOPATH/bin
-
 # -------------------------------------
 # 環境変数
 # -------------------------------------
@@ -135,9 +123,6 @@ function peco-src () {
 zle -N peco-src
 bindkey '^]' peco-src
 
-# yarn
-export PATH="$PATH:`yarn global bin`"
-
 function color_test {
   #   Daniel Crisman's ANSI color chart script from
   #   The Bash Prompt HOWTO: 6.1. Colours
@@ -169,3 +154,15 @@ function color_test {
   done
   echo
 }
+
+# homebrew
+alias brew="env PATH=${PATH/\/Users\/$USER\/Library\/Python\/2.7\/bin/} brew"
+
+# anyenv
+export PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"
+
+
+# golang
+export GOPATH=$HOME/.go
+export PATH=$PATH:$GOPATH/bin
