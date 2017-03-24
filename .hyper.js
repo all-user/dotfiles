@@ -25,6 +25,8 @@ module.exports = {
     // terminal background color
     backgroundColor: '#000',
 
+    // backgroundOpacity: '.7',
+
     // border color (window, tabs)
     borderColor: '#333',
 
@@ -34,6 +36,7 @@ module.exports = {
     // custom css to embed in the terminal window
     termCSS: `
       x-row { line-height: 19px; }
+      .wc-node { width: 16.771875px !important; }
     `,
 
     // set to `true` (without backticks) if you're using a Linux setup that doesn't show native menus
@@ -106,9 +109,9 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: [
-    'hyperhockney'
-  ],
+  plugins: ['hyperhockney', 'hypercwd', 'hyperlinks', 'hyper-statusline'],
+
+  defaultBrowser: true,
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
