@@ -109,7 +109,12 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ['hyperhockney', 'hypercwd', 'hyperlinks', 'hyper-statusline'],
+  plugins: [
+    'hyperhockney',
+    'hypercwd',
+    'hyperlinks',
+    'hyper-statusline'
+  ],
 
   defaultBrowser: true,
 

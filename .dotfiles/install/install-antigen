@@ -1,0 +1,9 @@
+#!/bin/sh -eu
+
+cd $HOME
+if [ -d $HOME/antigen ]; then
+  cd antigen
+  git pull
+else
+  git clone https://github.com/zsh-users/antigen.git antigen
+fi

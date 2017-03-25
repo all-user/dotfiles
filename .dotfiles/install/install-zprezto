@@ -1,0 +1,9 @@
+#!/bin/sh -eu
+
+cd $HOME
+if [ -d $HOME/.zprezto ]; then
+  cd .zprezto
+  git pull
+else
+  git clone --recursive https://github.com/sorin-ionescu/prezto.git $HOME/.zprezto
+fi
