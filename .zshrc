@@ -6,7 +6,7 @@
 #
 
 # ITerm2 Integration
-source $HOME/.iterm2_shell_integration.zsh
+. $HOME/.iterm2_shell_integration.zsh
 
 # -------------------------------------
 # 環境変数
