@@ -6,7 +6,7 @@
 #
 
 # ITerm2 Integration
-. $HOME/.iterm2_shell_integration.zsh
+source $HOME/.iterm2_shell_integration.zsh
 
 # -------------------------------------
 # 環境変数
@@ -124,3 +124,15 @@ export PATH=$GOPATH/bin:$PATH
 # anyenv
 export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
+
+# kubectl
+# if [ $commands[kubectl] ]; then
+#   source <(kubectl completion zsh)
+# fi
+
+# minikube
+# eval $(minikube docker-env)
+
+if [ -f $HOME/.zshlocal ]; then
+  source $HOME/.zshlocal
+fi

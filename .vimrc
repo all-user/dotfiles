@@ -10,11 +10,6 @@ set showmatch
 set helpheight=999
 set list
 set listchars=eol:⤸,tab:>-,trail:~,extends:>,precedes:<,nbsp:.
-augroup highlightIdegraphicSpace
-  autocmd!
-  autocmd Colorscheme * highlight IdeographicSpace term=underline ctermbg=DarkGreen guibg=DarkGreen
-  autocmd VimEnter,WinEnter * match IdeographicSpace /　/
-augroup END
 
 
 set backspace=indent,eol,start
@@ -169,11 +164,11 @@ inoremap <silent><F3> <C-O>:lprevious<CR>
 vnoremap <silent><F3> :lprevious<CR>
 
 " Powerline
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
 set showtabline=2
 set noshowmode
 set t_Co=256
 
-colorscheme molokai
+"colorscheme molokai
