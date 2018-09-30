@@ -121,6 +121,10 @@ fi
 export GOPATH=$HOME/.go
 export PATH=$GOPATH/bin:$PATH
 
+# anyenv
+export PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"
+
 # kubectl
 # if [ $commands[kubectl] ]; then
 #   source <(kubectl completion zsh)
