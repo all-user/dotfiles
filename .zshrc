@@ -118,7 +118,7 @@ if [ -d $HOME/.dotfiles/def ]; then
 fi
 
 # golang
-export GOPATH=$HOME/.go
+export GOPATH=$HOME/_go
 export PATH=$GOPATH/bin:$PATH
 
 # anyenv
@@ -140,3 +140,6 @@ fi
 # asdf
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
+
+# ghq
+export GHQ_ROOT=$HOME/_ghqroot
