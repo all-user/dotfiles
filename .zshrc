@@ -1,3 +1,5 @@
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 #
 # Executes commands at the start of an interactive session.
 #
@@ -17,17 +19,13 @@ export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # エディタ
-export EDITOR=/usr/local/bin/vim
-export VISUAL=/usr/local/bin/vim
+export EDITOR=/opt/homebrew/bin/vim
+export VISUAL=/opt/homebrew/bin/vim
 
 
 # -------------------------------------
 # zshのオプション
 # -------------------------------------
-
-## 補完機能の強化
-autoload -U compinit
-compinit
 
 ## 入力しているコマンド名が間違っている場合にもしかして：を出す。
 setopt correct
@@ -68,6 +66,8 @@ setopt extended_glob
 typeset -U path cdpath fpath manpath
 
 path=(
+    /opt/homebrew/bin(N-/)
+    /opt/homebrew/sbin(N-/)
     $HOME/bin(N-/)
     /usr/local/bin(N-/)
     /usr/local/sbin(N-/)
@@ -95,10 +95,6 @@ alias tree="tree -NC" # N: 文字化け対策, C:色をつける
 function title {
     echo -ne $*
 }
-
-# antigen
-# Customize to your needs...
-source $HOME/antigen/antigen.zsh
 
 # prezto
 # Source Prezto.
@@ -137,9 +133,8 @@ if [ -f $HOME/.zshlocal ]; then
   source $HOME/.zshlocal
 fi
 
-# asdf
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
-
 # ghq
 export GHQ_ROOT=$HOME/_ghqroot
+
+## 補完機能の強化
+autoload -Uz compinit && compinit
