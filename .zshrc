@@ -116,6 +116,7 @@ fi
 # golang
 export GOPATH=$HOME/_go
 export PATH=$GOPATH/bin:$PATH
+export GOPROXY=direct
 
 # anyenv
 export PATH="$HOME/.anyenv/bin:$PATH"
@@ -138,3 +139,14 @@ export GHQ_ROOT=$HOME/_ghqroot
 
 ## 補完機能の強化
 autoload -Uz compinit && compinit
+
+# bun completions
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# volta
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
