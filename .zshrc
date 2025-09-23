@@ -139,3 +139,6 @@ export GHQ_ROOT=$HOME/_ghqroot
 
 ## 補完機能の強化
 autoload -Uz compinit && compinit
+
+## 1Password plugins
+source ~/.config/op/plugins.sh
