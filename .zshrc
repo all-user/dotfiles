@@ -8,7 +8,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 #
 
 # ITerm2 Integration
-source $HOME/.iterm2_shell_integration.zsh
+# source $HOME/.iterm2_shell_integration.zsh
 
 # -------------------------------------
 # 環境変数
@@ -92,9 +92,9 @@ alias tree="tree -NC" # N: 文字化け対策, C:色をつける
 # -------------------------------------
 
 # iTerm2のタブ名を変更する
-function title {
-    echo -ne $*
-}
+# function title {
+#     echo -ne $*
+# }
 
 # prezto
 # Source Prezto.
