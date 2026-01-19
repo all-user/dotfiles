@@ -54,6 +54,9 @@ zstyle ':prezto:module:editor' key-bindings 'vi'
 # Git
 #
 
+# Skip loading git aliases
+zstyle ':prezto:module:git:alias' skip 'yes'
+
 # Ignore submodules when they are 'dirty', 'untracked', 'all', or 'none'.
 # zstyle ':prezto:module:git:status:ignore' submodules 'all'
 
