@@ -145,3 +145,8 @@ source ~/.config/op/plugins.sh
 
 ## mise
 eval "$(mise activate zsh)"
+
+## fzf + ghq
+export FZF_ALT_C_COMMAND='ghq list -p'
+source <(fzf --zsh)
+bindkey '^]' fzf-cd-widget
