@@ -142,3 +142,6 @@ autoload -Uz compinit && compinit
 
 ## 1Password plugins
 source ~/.config/op/plugins.sh
+
+## mise
+eval "$(mise activate zsh)"
