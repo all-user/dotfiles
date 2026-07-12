@@ -1,0 +1,51 @@
+#!/bin/zsh
+set -eu
+
+# Legacy links and directories replaced by the mise-managed configuration.
+candidates=(
+  "$HOME/.dotfiles"
+  "$HOME/.gitignore"
+  "$HOME/.vim"
+  "$HOME/.vimrc"
+  "$HOME/.zprezto"
+  "$HOME/.zpreztorc"
+  "$HOME/.zshenv"
+  "$HOME/antigen"
+  "$HOME/.antigen"
+  "$HOME/.anyenv"
+  "$HOME/.hyper.js"
+  "$HOME/.iterm2_shell_integration.zsh"
+)
+
+# Rebuild completion metadata after removing Prezto and old completion paths.
+candidates+=("$HOME"/.zcompdump*(N))
+
+execute=false
+if [[ "${1:-}" == "--execute" ]]; then
+  execute=true
+elif (( $# > 0 )); then
+  print -u2 "Usage: $0 [--execute]"
+  exit 2
+fi
+
+found=false
+for candidate in "${candidates[@]}"; do
+  if [[ -e "$candidate" || -L "$candidate" ]]; then
+    found=true
+    if $execute; then
+      print -- "remove: $candidate"
+      rm -rf -- "$candidate"
+    else
+      print -- "would remove: $candidate"
+      ls -ld -- "$candidate"
+    fi
+  fi
+done
+
+if ! $found; then
+  print "No legacy files found."
+elif ! $execute; then
+  print
+  print "Review the paths above, then run:"
+  print "  $0 --execute"
+fi

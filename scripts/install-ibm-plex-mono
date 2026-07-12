@@ -1,0 +1,20 @@
+#!/bin/sh
+set -eu
+
+version=2.5.0
+sha256=6d23f01257663d8cc49a0d64c22ced630b79e0e2a0ac08a0da86e9a38bbc481c
+url="https://github.com/IBM/plex/releases/download/%40ibm%2Fplex-mono%40${version}/ibm-plex-mono.zip"
+font_dir="$HOME/Library/Fonts"
+
+if [ -f "$font_dir/IBMPlexMono-Regular.otf" ]; then
+  exit 0
+fi
+
+work_dir=$(mktemp -d)
+trap 'rm -rf "$work_dir"' EXIT HUP INT TERM
+
+curl -fsSL "$url" -o "$work_dir/ibm-plex-mono.zip"
+printf '%s  %s\n' "$sha256" "$work_dir/ibm-plex-mono.zip" | shasum -a 256 -c -
+unzip -q "$work_dir/ibm-plex-mono.zip" -d "$work_dir"
+mkdir -p "$font_dir"
+cp "$work_dir"/ibm-plex-mono/fonts/complete/otf/*.otf "$font_dir/"

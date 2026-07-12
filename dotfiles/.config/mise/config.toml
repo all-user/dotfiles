@@ -1,0 +1,14 @@
+[settings]
+lockfile = true
+
+[tools]
+node = "lts"
+ruby = "latest"
+python = "latest"
+go = "latest"
+fzf = "latest"
+gh = "latest"
+ghq = "latest"
+jq = "latest"
+herdr = "latest"
+hunk = "latest"

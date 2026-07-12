@@ -1,0 +1,43 @@
+font-family = IBM Plex Mono
+font-size = 14
+
+# Japanese glyph ranges
+# CJK記号・句読点（、。・「」など）: U+3000-U+303F
+# ひらがな: U+3040-U+309F
+# カタカナ: U+30A0-U+30FF
+# カタカナ拡張（小書き・特殊用）: U+31F0-U+31FF
+# 半角カナ: U+FF65-U+FF9F
+# 半角句読点を含める場合: U+FF61-U+FF9F
+# 漢字（CJK統合漢字・基本）: U+4E00-U+9FFF
+# 漢字（CJK統合漢字・拡張A）: U+3400-U+4DBF
+# 互換漢字（CJK互換漢字）: U+F900-U+FAFF
+#
+# Supplementary planes
+# 漢字（CJK統合漢字・拡張B）: U+20000-U+2A6DF
+# 漢字（拡張C）: U+2A700-U+2B73F
+# 漢字（拡張D）: U+2B740-U+2B81F
+# 漢字（拡張E）: U+2B820-U+2CEAF
+# 漢字（拡張F）: U+2CEB0-U+2EBEF
+# 漢字（拡張G）: U+30000-U+3134F
+# 互換漢字補助: U+2F800-U+2FA1F
+# かな補助（変体仮名など）: U+1B000-U+1B0FF
+# かな拡張A: U+1B100-U+1B12F
+# 小書きかな拡張: U+1B130-U+1B16F
+# かな拡張B: U+1AFF0-U+1AFFF
+font-codepoint-map = U+3000-U+303F,U+3040-U+309F,U+30A0-U+30FF,U+31F0-U+31FF,U+3400-U+4DBF,U+4E00-U+9FFF,U+F900-U+FAFF,U+FF65-U+FF9F,U+1B000-U+1B0FF,U+1B100-U+1B12F,U+1B130-U+1B16F,U+1AFF0-U+1AFFF,U+20000-U+2A6DF,U+2A700-U+2B73F,U+2B740-U+2B81F,U+2B820-U+2CEAF,U+2CEB0-U+2EBEF,U+2F800-U+2FA1F,U+30000-U+3134F=ヒラギノ丸ゴ ProN
+font-thicken = true
+font-thicken-strength = 255
+
+theme = hockney-light
+unfocused-split-opacity = 0.4
+adjust-cursor-thickness = 2
+
+keybind = global:super+shift+ctrl+space=toggle_visibility
+keybind = super+shift+bracket_left=unbind
+keybind = super+shift+bracket_right=unbind
+keybind = super+bracket_left=unbind
+keybind = super+bracket_right=unbind
+keybind = super+shift+[=previous_tab
+keybind = super+shift+]=next_tab
+keybind = super+[=goto_split:previous
+keybind = super+]=goto_split:next

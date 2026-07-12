@@ -1,24 +1,4 @@
-# ignore all
-/*
-/.*
-
-# allow files
-!/.gitignore
-!/.vimrc
-!/.zpreztorc
-!/.zshrc
-!/.zshenv
-!/Makefile
-!/Brewfile
-!/README.md
-!/.hyper.js
-!/.iterm2_shell_integration.zsh
-
-# .vim dir
-!/.vim/
-/.vim/*
-!/.vim/colors/
-
-# bin dir
-!/bin/
-!/.dotfiles/
+.DS_Store
+.vim/
+.mise.local.toml
+mise.local.lock
