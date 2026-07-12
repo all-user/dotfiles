@@ -1,0 +1,43 @@
+min_version = "2026.7.5"
+
+[settings]
+lockfile = true
+ruby.compile = false
+
+[tools]
+node = "lts"
+ruby = "latest"
+python = "latest"
+go = "latest"
+fzf = "latest"
+gh = "latest"
+ghq = "latest"
+jq = "latest"
+herdr = "latest"
+hunk = "latest"
+
+[bootstrap.packages]
+"brew:git" = "latest"
+"brew:neovim" = "latest"
+"brew:ncdu" = "latest"
+"brew:tree" = "latest"
+
+[bootstrap.repos]
+"~/.local/share/zsh/plugins/zsh-autosuggestions" = { url = "https://github.com/zsh-users/zsh-autosuggestions.git", ref = "a411ef3e0992d4839f0732ebeb9823024afaaaa8" }
+"~/.local/share/zsh/plugins/zsh-syntax-highlighting" = { url = "https://github.com/zsh-users/zsh-syntax-highlighting.git", ref = "932e29a0c75411cb618f02995b66c0a4a25699bc" }
+"~/.local/share/zsh/plugins/zsh-history-substring-search" = { url = "https://github.com/zsh-users/zsh-history-substring-search.git", ref = "0f80b8eb3368b46e5e573c1d91ae69eb095db3fb" }
+
+[dotfiles]
+"~/.zshrc" = { source = "dotfiles/.zshrc", mode = "symlink" }
+"~/.editorconfig" = { source = "dotfiles/.editorconfig", mode = "symlink" }
+"~/.config/mise/config.toml" = { source = "dotfiles/.config/mise/config.toml", mode = "symlink" }
+"~/.config/mise/mise.lock" = { source = "mise.lock", mode = "symlink" }
+"~/.config/nvim/init.lua" = { source = "dotfiles/.config/nvim/init.lua", mode = "symlink" }
+"~/.config/ghostty/config.ghostty" = { source = "dotfiles/.config/ghostty/config.ghostty", mode = "symlink" }
+"~/.config/ghostty/themes/hockney-light" = { source = "dotfiles/.config/ghostty/themes/hockney-light", mode = "symlink" }
+"~/.config/herdr/config.toml" = { source = "dotfiles/.config/herdr/config.toml", mode = "symlink" }
+
+[tasks.bootstrap]
+description = "Install assets not supported by bootstrap package backends"
+dir = "{{ config_root }}"
+run = "scripts/install-ibm-plex-mono"
