@@ -2,3 +2,4 @@
 .vim/
 .mise.local.toml
 mise.local.lock
+nvim.log
