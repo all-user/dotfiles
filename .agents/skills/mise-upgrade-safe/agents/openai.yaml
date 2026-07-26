@@ -1,0 +1,4 @@
+interface:
+  display_name: "Safe Mise Upgrade"
+  short_description: "Review and safely apply mise tool upgrades"
+  default_prompt: "Review mise.toml tool updates, avoid versions newer than the default release-age window, show a dry run with release links, then apply approved upgrades."
