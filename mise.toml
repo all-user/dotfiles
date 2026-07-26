@@ -14,7 +14,7 @@ gh = "latest"
 ghq = "latest"
 jq = "latest"
 herdr = "latest"
-hunk = "latest"
+hunk = "0.17.4"
 
 [bootstrap.packages]
 "brew:git" = "latest"
