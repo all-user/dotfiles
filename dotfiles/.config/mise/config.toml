@@ -1,6 +1,9 @@
 [settings]
 lockfile = true
 
+[settings.status]
+missing_tools = "always"
+
 [tools]
 node = "lts"
 ruby = "latest"
